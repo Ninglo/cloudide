@@ -1,0 +1,92 @@
+.practices {
+  position: relative;
+  top: -65px;
+  margin: 0 auto;
+  min-width: 1200px;
+  width: 1200px;
+  padding-bottom: 22px;
+  background: #fafafa;
+
+  .practices-intro {
+    .title {
+      padding-top: 81px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 40px;
+      text-align: center;
+      color: #1d2129;
+    }
+
+    .detail {
+      margin-top: 4px;
+      font-size: 14px;
+      text-align: center;
+      color: #4e5969;
+    }
+  }
+
+  .practices-tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    .tab {
+      margin-left: 24px;
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #86909c;
+      cursor: pointer;
+    }
+
+    .tab-active {
+      margin-left: 24px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #1d2129;
+      border-bottom: 4px solid #1d2129;
+      cursor: pointer;
+    }
+  }
+
+  .practices-video {
+    .video {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      video {
+        width: 1200px;
+        height: 673px;
+        border-radius: 10px;
+      }
+    }
+    .cards {
+      display: flex;
+      margin-top: 66px;
+      .card {
+        &:not(:first-child) {
+          margin-left: 16px;
+        }
+
+        .head {
+          .title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            color: #1d2129;
+          }
+        }
+
+        .detail {
+          margin-top: 22px;
+          margin-right: 28px;
+          font-size: 14px;
+          line-height: 22px;
+          color: #4e5969;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.cloudide-welcome-footer {
+  background: #25213b;
+  .footer-content {
+    padding: 48px 100px 0;
+    margin: 0 auto;
+    min-width: 1400px;
+    width: 1400px;
+
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 22px;
+      color: #ffffff;
+    }
+
+    .links {
+      display: flex;
+      margin-top: 24px;
+
+      .link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .icon {
+          color: #ffffff;
+        }
+
+        .text {
+          margin-left: 12px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          color: #fafafa;
+        }
+      }
+
+      .lark-group {
+        margin-left: 40px;
+        .lark-name {
+          margin-left: 0;
+        }
+
+        .lark-group-content {
+          display: flex;
+
+          .lark-icon-background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ffffff;
+
+            .lark-icon {
+              margin-top: 2px;
+              margin-right: 1px;
+            }
+          }
+          .text {
+            margin-left: 12px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            color: #fafafa;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      margin-top: 16px;
+      padding-bottom: 47px;
+      font-size: 12px;
+      line-height: 22px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}

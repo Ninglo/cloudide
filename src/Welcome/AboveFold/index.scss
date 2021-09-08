@@ -1,0 +1,276 @@
+.above-fold {
+  background: linear-gradient(289.05deg, #110620 -1.04%, rgba(17, 16, 46, 0.87) 111.55%);
+  .content {
+    padding: 0px 100px 95px;
+    margin: 0 auto;
+    min-width: 1400px;
+    width: 1400px;
+    background: url('./background.png') center center no-repeat;
+    background-size: 926px 500px;
+
+    .intro {
+      padding-top: 110px;
+      .title {
+        margin-bottom: 24px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 56px;
+        color: #ffffff;
+      }
+
+      .detail {
+        margin-top: 12px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      .main-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 178px;
+        height: 44px;
+        background: linear-gradient(158.28deg, #5f70b0 14.25%, #474470 230.85%);
+        border-radius: 36px;
+        cursor: pointer;
+        .text {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+
+        .icon {
+          position: relative;
+          margin-left: 10px;
+          background: #ffffff;
+          border-radius: 14px;
+
+          .icon-content {
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+            transform: rotate(-90deg);
+            .arrow-icon--circle {
+              transition: stroke-dashoffset 0.3s ease; // 退出时动效
+              stroke-dasharray: 315;
+              stroke-dashoffset: 315;
+            }
+            .arrow {
+              position: absolute;
+              left: 0px;
+              transform: rotate(180deg);
+            }
+          }
+
+          &:hover {
+            .arrow-icon--circle {
+              transition: stroke-dashoffset 0.5s ease; // hover 时动效
+              stroke-dashoffset: 0;
+            }
+          }
+        }
+
+        &:hover {
+          background: linear-gradient(151.73deg, #5f70b0 -30.78%, #474470 88.04%);
+        }
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        width: 112px;
+        height: 44px;
+        border: 2px solid #51495c;
+        border-radius: 36px;
+        cursor: pointer;
+        .text {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+
+        &:hover {
+          background: #30273e;
+          transition: background 0.4s ease-in-out;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 60px;
+      margin-left: -20px;
+      .card {
+        position: relative;
+        padding-top: 16px;
+        margin-top: 24px;
+        margin-left: 20px;
+        width: 285px;
+        height: 148px;
+        background: #30273e;
+        border: 3px solid #4b4771;
+        border-radius: 6px;
+        cursor: pointer;
+        .icon {
+          height: 24px;
+          margin-left: 16px;
+        }
+
+        .title {
+          margin-top: 12px;
+          margin-left: 16px;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+          color: #f1f1f1;
+        }
+
+        .detail {
+          margin: 12px 30px auto 16px;
+          font-size: 12px;
+          line-height: 20px;
+          color: rgba(229, 230, 235, 0.4);
+        }
+        // 必须两个类都有这个处理才有正确动效
+        //#region hover transition
+        &::before,
+        &::after {
+          position: absolute;
+          content: ' ';
+          width: 0;
+          height: 0;
+          border-radius: 6px;
+          border: 5px solid transparent;
+          box-sizing: border-box;
+        }
+        &::before {
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+        &:hover::before,
+        &:hover::after {
+          width: 100%;
+          height: 100%;
+        }
+        &:hover::before {
+          border-top-color: #8395df;
+          border-right-color: #8395df;
+          transition: width 0.1s ease-out, height 0.05s ease-out 0.1s;
+        }
+        &:hover::after {
+          border-bottom-color: #8395df;
+          border-left-color: #8395df;
+          transition: border-color 0s ease-out 0.15s, width 0.1s ease-out 0.15s, height 0.05s ease-out 0.25s;
+        }
+        //#endregion
+      }
+
+      .card-active {
+        position: relative;
+        width: 287px;
+        height: 148px;
+        margin-top: 24px;
+        margin-left: 18px;
+        padding: 16px;
+        border-radius: 6px;
+        background: linear-gradient(6.81deg, #382a4a -44.13%, #708edc 176.29%, #708edc 176.29%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+        .icon {
+          height: 24px;
+          margin-left: 16px;
+        }
+
+        .title {
+          margin-top: 12px;
+          margin-left: 16px;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+          color: #f1f1f1;
+        }
+
+        .detail {
+          margin: 12px 30px auto 16px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          color: #f1f1f1;
+        }
+        // 必须两个类都有这个处理才有正确动效
+        //#region hover transition
+        &::before,
+        &::after {
+          position: absolute;
+          content: ' ';
+          width: 0;
+          height: 0;
+          border-radius: 6px;
+          border: 5px solid transparent;
+          box-sizing: border-box;
+        }
+        &::before {
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+        &:hover::before,
+        &:hover::after {
+          width: 100%;
+          height: 100%;
+        }
+        &:hover::before {
+          border-top-color: #8395df;
+          border-right-color: #8395df;
+          transition: width 0.1s ease-out, height 0.05s ease-out 0.1s;
+        }
+        &:hover::after {
+          border-bottom-color: #8395df;
+          border-left-color: #8395df;
+          transition: border-color 0s ease-out 0.15s, width 0.1s ease-out 0.15s, height 0.05s ease-out 0.25s;
+        }
+        //#endregion
+      }
+
+      .border-action {
+        &::before,
+        &::after {
+          width: 100%;
+          height: 100%;
+        }
+        &::after {
+          border-bottom-color: #8395df;
+          border-left-color: #8395df;
+          transition: border-color 0s ease-out 0.2s, width 0.13s ease-out 0.2s, height 0.07s ease-out 0.33s;
+        }
+        &::before {
+          border-top-color: #8395df;
+          border-right-color: #8395df;
+          transition: width 0.13s ease-out, height 0.07s ease-out 0.13s;
+        }
+      }
+    }
+  }
+}
